@@ -22,4 +22,14 @@ class ProductController extends Controller
                                     
     }
 
+    public function shop_index()
+    {
+        $products = Product::all();
+        $categories = Category::all();
+    
+        return view('shop')->with('products',$products)
+                           ->with('categories',$categories);
+                                    
+    }
+
 }

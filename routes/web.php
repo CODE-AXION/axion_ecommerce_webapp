@@ -24,6 +24,11 @@ Route::get('/dashboard', function () {
 
 
 // Route::view('home','/home');
+
+//HOME PAGE VIEWS
+
 Route::get('/home', [ProductController::class, 'home']);
+Route::get('/shop', [ProductController::class, 'shop_index'])->name('shop.index');
+
 
 require __DIR__.'/auth.php';
