@@ -12,9 +12,10 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/owl.carousel.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css')}}">
+	{{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css')}}"> --}}
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css')}}">
+	
 	
 	@livewireStyles
 </head>
@@ -207,7 +208,8 @@
 
 					
 
-					<livewire:products.product-index />
+					{{-- <livewire:products.product-index /> --}}
+					@livewire('products.product-index')
 
 
 					<!--end main products area-->
@@ -653,6 +655,7 @@
 	<script src="assets/js/jquery.countdown.min.js"></script>
 	<script src="assets/js/jquery.sticky.js"></script>
 	<script src="assets/js/functions.js"></script>
+
 
 	@livewireScripts
 

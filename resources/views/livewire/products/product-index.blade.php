@@ -12,7 +12,7 @@
         <div class="wrap-right">
 
             <div class="sort-item orderby ">
-                <select name="sortBy" class="use-chosen" wire:model="sortBy">
+                <select wire:model="sortBy" name="sortBy" class="use-chosen" >
                     <option value="" selected="selected">Default sorting</option>
                     <option value="featured">Featured</option>
                     {{-- <option value="menu_order" selected="selected">Default sorting</option> --}}
@@ -24,22 +24,8 @@
                 </select>
             </div>
 
-
-            {{-- <div class="sort-item ">
-                <select name="sortBy" class="chosen" wire:model="sortBy">
-                    <option value="default" selected="selected">Default sorting</option>
-                    <option value="latest">Sort by Latest Product</option>
-                    <option value="oldest">Sort by Oldest Product</option>
-                    <option value="heigh">Sort by Featured Product</option>
-                    <option value="low">Sort by price: low to high</option>
-                    <option value="heigh">Sort by price: high to low</option>
-                </select>
-            </div> --}}
-
-
-
             <div class="sort-item product-per-page">
-                <select name="perPage" class="use-chosen" wire:model="perPage" >
+                <select wire:model="perPage"  >
                     <option value="3" >3 per page</option>
                     <option value="16">16 per page</option>
                     <option value="18">18 per page</option>
@@ -49,21 +35,6 @@
                     <option value="32">32 per page</option>
                 </select>
             </div>
-
-
-            {{-- <div class="sort-item product">
-                <select name="perPage" class="use-chosen" wire:model="perPage">
-                    <option value="6" selected="selected">6 per page</option>
-                    <option value="9">9 per page</option>
-                    <option value="12">12 per page</option>
-                    <option value="18">18 per page</option>
-                    <option value="21">21 per page</option>
-                    <option value="24">24 per page</option>
-                </select>
-            </div> --}}
-
-
-
 
             <div class="change-display-mode">
                 <a href="#" class="grid-mode display-mode active"><i class="fa fa-th"></i>Grid</a>
@@ -114,7 +85,7 @@
             </ul>
             <p class="result-count">Showing 1-8 of 12 result</p>
         </div> --}}
-    </div>
+    
 
 
 

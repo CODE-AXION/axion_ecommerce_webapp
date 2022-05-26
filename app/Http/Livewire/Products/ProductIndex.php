@@ -13,6 +13,7 @@ class ProductIndex extends Component
 {
 
 
+    public $pernew;
     public $sortBy = '';
     public $perPage = 3;
 
