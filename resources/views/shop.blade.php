@@ -1,663 +1,771 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Digital & Electronics</title>
-	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/owl.carousel.min.css')}}">
-	{{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css')}}"> --}}
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css')}}">
-	
-	
-	@livewireStyles
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" > -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" >
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
+
 </head>
-<body class="home-page home-01 ">
+<body>
+    
 
 
-	<!-- mobile menu -->
-    <div class="mercado-clone-wrap">
-        <div class="mercado-panels-actions-wrap">
-            <a class="mercado-close-btn mercado-close-panels" href="#">x</a>
+<header class="wrapper bimage">
+
+    <input type="checkbox" id="show_search">
+    <h1 class="logo">CODE AXION</h1>
+    <h1 class="logo_2">CA</h1>
+
+
+    <div class="search_class" >
+
+        <form action="" class="search_box" method="get"  >
+
+            <input class="search_bar"  type="text" placeholder="Search for Security Articles..">
+
+          <button class="go_icon"   type="submit" > <img class="search-icon" src="search_icon.svg"></button>
+
+        </form>
+
+    </div>  <label for="show_search" class="search_icon"><i class="fas fa-search"></i></label>
+
+<div class="ecommerce_account_wrapper">
+    <div class="your_account_wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+          </svg>
+          <h6 class="your_account">
+              My Account
+          </h6>
+
+
+ 
+         <div class="your_account_dropdown">
+
+            
+            <ul class="your_acc">
+                <li class="your_acc_dropdown_level_1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      </svg>
+
+
+                     <h5 class="common_acc" > Account </h5>
+                    
+                    </li>
+
+                   
+
+
+                        <li class="your_acc_dropdown_level_1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+                              </svg>
+        
+        
+                             <h5 class="common_acc" > Keyboard </h5>
+                            
+                            </li>
+
+
+
+
+                            <li class="your_acc_dropdown_level_1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                                  </svg>
+            
+            
+                                 <h5 class="common_acc" > Settings </h5>
+                                
+                                </li>
+
+
+
+                            <hr>
+
+
+
+
+
+                            <li class="your_acc_dropdown_level_1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                                  </svg>
+            
+            
+                                 <h5 class="common_acc" > Help </h5>
+                                
+                                </li>
+
+
+                            <li class="your_acc_dropdown_level_1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                                  </svg>
+            
+            
+                                 <h5 class="common_acc" > Sign Out </h5>
+                                
+                                </li>
+            
+
+
+
+
+
+            </ul>
         </div>
-        <div class="mercado-panels"></div>
+
+
+
+
+
+
+
+
+
+
     </div>
 
-	<!--header-->
-	<header id="header" class="header header-style-1">
-		<div class="container-fluid">
-			<div class="row">				
 
-				<div class="topbar-menu-area">
-					<div class="container">
-						<div class="topbar-menu left-menu">
-							<ul>
-								<li class="menu-item" >
-									<a title="Hotline: (+123) 456 789" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
-								</li>
-							</ul>
-						</div>
-						<div class="topbar-menu right-menu">
-							<ul>
-								<li class="menu-item" ><a title="Register or Login" href="login.html">Login</a></li>
-								<li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li>								
-								<li class="menu-item lang-menu menu-item-has-children parent">
-									<a title="English" href="#"><span class="img label-before"><img src="assets/images/lang-en.png" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-									<ul class="submenu lang" >
-										<li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="assets/images/lang-hun.png" alt="lang-hun"></span>Hungary</a></li>
-										<li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="assets/images/lang-ger.png" alt="lang-ger" ></span>German</a></li>
-										<li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="assets/images/lang-fra.png" alt="lang-fre"></span>French</a></li>
-										<li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="assets/images/lang-can.png" alt="lang-can"></span>Canada</a></li>
-									</ul>
-								</li>
-								<li class="menu-item menu-item-has-children parent" >
-									<a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-									<ul class="submenu curency" >
-										<li class="menu-item" >
-											<a title="Pound (GBP)" href="#">Pound (GBP)</a>
-										</li>
-										<li class="menu-item" >
-											<a title="Euro (EUR)" href="#">Euro (EUR)</a>
-										</li>
-										<li class="menu-item" >
-											<a title="Dollar (USD)" href="#">Dollar (USD)</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+    <div class="wishlist_wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-heart" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5Zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0ZM14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1ZM8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+          </svg>
+          <h6 class="wishlist">
+              Wishlist
+          </h6>
+    </div>
 
-				<div class="container">
-					<div class="mid-section main-info-area">
-
-						<div class="wrap-logo-top left-section">
-							<a href="index.html" class="link-to-home"><img src="assets/images/logo-top-1.png" alt="mercado"></a>
-						</div>
-
-						<div class="wrap-search center-section">
-							<div class="wrap-search-form">
-								<form action="#" id="form-search-top" name="form-search-top">
-									<input type="text" name="search" value="" placeholder="Search here...">
-									<button form="form-search-top" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-									<div class="wrap-list-cate">
-										<input type="hidden" name="product-cate" value="0" id="product-cate">
-										<a href="#" class="link-control">All Category</a>
-										<ul class="list-cate">
-											<li class="level-0">All Category</li>
-											<li class="level-1">-Electronics</li>
-											<li class="level-2">Batteries & Chargens</li>
-											<li class="level-2">Headphone & Headsets</li>
-											<li class="level-2">Mp3 Player & Acessories</li>
-											<li class="level-1">-Smartphone & Table</li>
-											<li class="level-2">Batteries & Chargens</li>
-											<li class="level-2">Mp3 Player & Headphones</li>
-											<li class="level-2">Table & Accessories</li>
-											<li class="level-1">-Electronics</li>
-											<li class="level-2">Batteries & Chargens</li>
-											<li class="level-2">Headphone & Headsets</li>
-											<li class="level-2">Mp3 Player & Acessories</li>
-											<li class="level-1">-Smartphone & Table</li>
-											<li class="level-2">Batteries & Chargens</li>
-											<li class="level-2">Mp3 Player & Headphones</li>
-											<li class="level-2">Table & Accessories</li>
-										</ul>
-									</div>
-								</form>
-							</div>
-						</div>
-
-						<div class="wrap-icon right-section">
-							<div class="wrap-icon-section wishlist">
-								<a href="#" class="link-direction">
-									<i class="fa fa-heart" aria-hidden="true"></i>
-									<div class="left-info">
-										<span class="index">0 item</span>
-										<span class="title">Wishlist</span>
-									</div>
-								</a>
-							</div>
-							<div class="wrap-icon-section minicart">
-								<a href="#" class="link-direction">
-									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
-									<div class="left-info">
-										<span class="index">4 items</span>
-										<span class="title">CART</span>
-									</div>
-								</a>
-							</div>
-							<div class="wrap-icon-section show-up-after-1024">
-								<a href="#" class="mobile-navigation">
-									<span></span>
-									<span></span>
-									<span></span>
-								</a>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-				<div class="nav-section header-sticky">
-					<div class="header-nav-section">
-						<div class="container">
-							<ul class="nav menu-nav clone-main-menu" id="mercado_haead_menu" data-menuname="Sale Info" >
-								<li class="menu-item"><a href="#" class="link-term">Weekly Featured</a><span class="nav-label hot-label">hot</span></li>
-								<li class="menu-item"><a href="#" class="link-term">Hot Sale items</a><span class="nav-label hot-label">hot</span></li>
-								<li class="menu-item"><a href="#" class="link-term">Top new items</a><span class="nav-label hot-label">hot</span></li>
-								<li class="menu-item"><a href="#" class="link-term">Top Selling</a><span class="nav-label hot-label">hot</span></li>
-								<li class="menu-item"><a href="#" class="link-term">Top rated items</a><span class="nav-label hot-label">hot</span></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="primary-nav-section">
-						<div class="container">
-							<ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
-								<li class="menu-item home-icon">
-									<a href="index.html" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
-								</li>
-								<li class="menu-item">
-									<a href="about-us.html" class="link-term mercado-item-title">About Us</a>
-								</li>
-								<li class="menu-item">
-									<a href="shop.html" class="link-term mercado-item-title">Shop</a>
-								</li>
-								<li class="menu-item">
-									<a href="cart.html" class="link-term mercado-item-title">Cart</a>
-								</li>
-								<li class="menu-item">
-									<a href="contact-us.html" class="link-term mercado-item-title">Contact Us</a>
-								</li>								
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-
-	<!--main area-->
-	<main id="main" class="main-site left-sidebar">
-
-		<div class="container">
-
-			<div class="wrap-breadcrumb">
-				<ul>
-					<li class="item-link"><a href="#" class="link">home</a></li>
-					<li class="item-link"><span>Digital & Electronics</span></li>
-				</ul>
-			</div>
-			<div class="row">
-
-				<div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 main-content-area">
-
-					<div class="banner-shop">
-						<a href="#" class="banner-link">
-							<figure><img src="assets/images/shop-banner.jpg" alt=""></figure>
-						</a>
-					</div>
-
-					
-
-					{{-- <livewire:products.product-index /> --}}
-					@livewire('products.product-index')
+    <div class="cart_wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
+          
+        <h6 class="shopping_cart">Cart</h6>
+    </div>
+</div>
+<!-- 
+    <div class="login_btn">
+        <a class="cta" href=""><button class="btn_sign btn_2">Login</button></a>
+    </div>
+    <div class="login_btn" >
+        <a class="cta" href=""><button class="btn_sign">Join</button></a>
+    </div> -->
 
 
-					<!--end main products area-->
-
-				<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 sitebar">
-					<div class="widget mercado-widget categories-widget">
-						<h2 class="widget-title">All Categories</h2>
-						<div class="widget-content">
-							<ul class="list-category">
-								<li class="category-item has-child-cate">
-									<a href="#" class="cate-link">Fashion & Accessories</a>
-									<span class="toggle-control">+</span>
-									<ul class="sub-cate">
-										<li class="category-item"><a href="#" class="cate-link">Batteries (22)</a></li>
-										<li class="category-item"><a href="#" class="cate-link">Headsets (16)</a></li>
-										<li class="category-item"><a href="#" class="cate-link">Screen (28)</a></li>
-									</ul>
-								</li>
-								<li class="category-item has-child-cate">
-									<a href="#" class="cate-link">Furnitures & Home Decors</a>
-									<span class="toggle-control">+</span>
-									<ul class="sub-cate">
-										<li class="category-item"><a href="#" class="cate-link">Batteries (22)</a></li>
-										<li class="category-item"><a href="#" class="cate-link">Headsets (16)</a></li>
-										<li class="category-item"><a href="#" class="cate-link">Screen (28)</a></li>
-									</ul>
-								</li>
-								<li class="category-item has-child-cate">
-									<a href="#" class="cate-link">Digital & Electronics</a>
-									<span class="toggle-control">+</span>
-									<ul class="sub-cate">
-										<li class="category-item"><a href="#" class="cate-link">Batteries (22)</a></li>
-										<li class="category-item"><a href="#" class="cate-link">Headsets (16)</a></li>
-										<li class="category-item"><a href="#" class="cate-link">Screen (28)</a></li>
-									</ul>
-								</li>
-								<li class="category-item">
-									<a href="#" class="cate-link">Tools & Equipments</a>
-								</li>
-								<li class="category-item">
-									<a href="#" class="cate-link">Kid’s Toys</a>
-								</li>
-								<li class="category-item">
-									<a href="#" class="cate-link">Organics & Spa</a>
-								</li>
-							</ul>
-						</div>
-					</div><!-- Categories widget-->
-
-					<div class="widget mercado-widget filter-widget brand-widget">
-						<h2 class="widget-title">Brand</h2>
-						<div class="widget-content">
-							<ul class="list-style vertical-list list-limited" data-show="6">
-								<li class="list-item"><a class="filter-link active" href="#">Fashion Clothings</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Laptop Batteries</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Printer & Ink</a></li>
-								<li class="list-item"><a class="filter-link " href="#">CPUs & Prosecsors</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Sound & Speaker</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Shop Smartphone & Tablets</a></li>
-								<li class="list-item default-hiden"><a class="filter-link " href="#">Printer & Ink</a></li>
-								<li class="list-item default-hiden"><a class="filter-link " href="#">CPUs & Prosecsors</a></li>
-								<li class="list-item default-hiden"><a class="filter-link " href="#">Sound & Speaker</a></li>
-								<li class="list-item default-hiden"><a class="filter-link " href="#">Shop Smartphone & Tablets</a></li>
-								<li class="list-item"><a data-label='Show less<i class="fa fa-angle-up" aria-hidden="true"></i>' class="btn-control control-show-more" href="#">Show more<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
-					</div><!-- brand widget-->
-
-					<div class="widget mercado-widget filter-widget price-filter">
-						<h2 class="widget-title">Price</h2>
-						<div class="widget-content">
-							<div id="slider-range"></div>
-							<p>
-								<label for="amount">Price:</label>
-								<input type="text" id="amount" readonly>
-								<button class="filter-submit">Filter</button>
-							</p>
-						</div>
-					</div><!-- Price-->
-
-					<div class="widget mercado-widget filter-widget">
-						<h2 class="widget-title">Color</h2>
-						<div class="widget-content">
-							<ul class="list-style vertical-list has-count-index">
-								<li class="list-item"><a class="filter-link " href="#">Red <span>(217)</span></a></li>
-								<li class="list-item"><a class="filter-link " href="#">Yellow <span>(179)</span></a></li>
-								<li class="list-item"><a class="filter-link " href="#">Black <span>(79)</span></a></li>
-								<li class="list-item"><a class="filter-link " href="#">Blue <span>(283)</span></a></li>
-								<li class="list-item"><a class="filter-link " href="#">Grey <span>(116)</span></a></li>
-								<li class="list-item"><a class="filter-link " href="#">Pink <span>(29)</span></a></li>
-							</ul>
-						</div>
-					</div><!-- Color -->
-
-					<div class="widget mercado-widget filter-widget">
-						<h2 class="widget-title">Size</h2>
-						<div class="widget-content">
-							<ul class="list-style inline-round ">
-								<li class="list-item"><a class="filter-link active" href="#">s</a></li>
-								<li class="list-item"><a class="filter-link " href="#">M</a></li>
-								<li class="list-item"><a class="filter-link " href="#">l</a></li>
-								<li class="list-item"><a class="filter-link " href="#">xl</a></li>
-							</ul>
-							<div class="widget-banner">
-								<figure><img src="assets/images/size-banner-widget.jpg" width="270" height="331" alt=""></figure>
-							</div>
-						</div>
-					</div><!-- Size -->
-
-					<div class="widget mercado-widget widget-product">
-						<h2 class="widget-title">Popular Products</h2>
-						<div class="widget-content">
-							<ul class="products">
-								<li class="product-item">
-									<div class="product product-widget-style">
-										<div class="thumbnnail">
-											<a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-												<figure><img src="assets/images/products/digital_01.jpg" alt=""></figure>
-											</a>
-										</div>
-										<div class="product-info">
-											<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
-											<div class="wrap-price"><span class="product-price">$168.00</span></div>
-										</div>
-									</div>
-								</li>
-
-								<li class="product-item">
-									<div class="product product-widget-style">
-										<div class="thumbnnail">
-											<a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-												<figure><img src="assets/images/products/digital_17.jpg" alt=""></figure>
-											</a>
-										</div>
-										<div class="product-info">
-											<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
-											<div class="wrap-price"><span class="product-price">$168.00</span></div>
-										</div>
-									</div>
-								</li>
-
-								<li class="product-item">
-									<div class="product product-widget-style">
-										<div class="thumbnnail">
-											<a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-												<figure><img src="assets/images/products/digital_18.jpg" alt=""></figure>
-											</a>
-										</div>
-										<div class="product-info">
-											<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
-											<div class="wrap-price"><span class="product-price">$168.00</span></div>
-										</div>
-									</div>
-								</li>
-
-								<li class="product-item">
-									<div class="product product-widget-style">
-										<div class="thumbnnail">
-											<a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-												<figure><img src="assets/images/products/digital_20.jpg" alt=""></figure>
-											</a>
-										</div>
-										<div class="product-info">
-											<a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker...</span></a>
-											<div class="wrap-price"><span class="product-price">$168.00</span></div>
-										</div>
-									</div>
-								</li>
-
-							</ul>
-						</div>
-					</div><!-- brand widget-->
-
-				</div><!--end sitebar-->
-
-			</div><!--end row-->
-
-		</div><!--end container-->
-
-	</main>
-	<!--main area-->
-
-	<!--footer area-->
-	<footer id="footer">
-		<div class="wrap-footer-content footer-style-1">
-
-			<div class="wrap-function-info">
-				<div class="container">
-					<ul>
-						<li class="fc-info-item">
-							<i class="fa fa-truck" aria-hidden="true"></i>
-							<div class="wrap-left-info">
-								<h4 class="fc-name">Free Shipping</h4>
-								<p class="fc-desc">Free On Oder Over $99</p>
-							</div>
-
-						</li>
-						<li class="fc-info-item">
-							<i class="fa fa-recycle" aria-hidden="true"></i>
-							<div class="wrap-left-info">
-								<h4 class="fc-name">Guarantee</h4>
-								<p class="fc-desc">30 Days Money Back</p>
-							</div>
-
-						</li>
-						<li class="fc-info-item">
-							<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-							<div class="wrap-left-info">
-								<h4 class="fc-name">Safe Payment</h4>
-								<p class="fc-desc">Safe your online payment</p>
-							</div>
-
-						</li>
-						<li class="fc-info-item">
-							<i class="fa fa-life-ring" aria-hidden="true"></i>
-							<div class="wrap-left-info">
-								<h4 class="fc-name">Online Suport</h4>
-								<p class="fc-desc">We Have Support 24/7</p>
-							</div>
-
-						</li>
-					</ul>
-				</div>
-			</div>
-			<!--End function info-->
-
-			<div class="main-footer-content">
-
-				<div class="container">
-
-					<div class="row">
-
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-							<div class="wrap-footer-item">
-								<h3 class="item-header">Contact Details</h3>
-								<div class="item-content">
-									<div class="wrap-contact-detail">
-										<ul>
-											<li>
-												<i class="fa fa-map-marker" aria-hidden="true"></i>
-												<p class="contact-txt">45 Grand Central Terminal New York,NY 1017 United State USA</p>
-											</li>
-											<li>
-												<i class="fa fa-phone" aria-hidden="true"></i>
-												<p class="contact-txt">(+123) 456 789 - (+123) 666 888</p>
-											</li>
-											<li>
-												<i class="fa fa-envelope" aria-hidden="true"></i>
-												<p class="contact-txt">Contact@yourcompany.com</p>
-											</li>											
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-
-							<div class="wrap-footer-item">
-								<h3 class="item-header">Hot Line</h3>
-								<div class="item-content">
-									<div class="wrap-hotline-footer">
-										<span class="desc">Call Us toll Free</span>
-										<b class="phone-number">(+123) 456 789 - (+123) 666 888</b>
-									</div>
-								</div>
-							</div>
-
-							<div class="wrap-footer-item footer-item-second">
-								<h3 class="item-header">Sign up for newsletter</h3>
-								<div class="item-content">
-									<div class="wrap-newletter-footer">
-										<form action="#" class="frm-newletter" id="frm-newletter">
-											<input type="email" class="input-email" name="email" value="" placeholder="Enter your email address">
-											<button class="btn-submit">Subscribe</button>
-										</form>
-									</div>
-								</div>
-							</div>
-
-						</div>
-
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 box-twin-content ">
-							<div class="row">
-								<div class="wrap-footer-item twin-item">
-									<h3 class="item-header">My Account</h3>
-									<div class="item-content">
-										<div class="wrap-vertical-nav">
-											<ul>
-												<li class="menu-item"><a href="#" class="link-term">My Account</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Brands</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Gift Certificates</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Affiliates</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Wish list</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="wrap-footer-item twin-item">
-									<h3 class="item-header">Infomation</h3>
-									<div class="item-content">
-										<div class="wrap-vertical-nav">
-											<ul>
-												<li class="menu-item"><a href="#" class="link-term">Contact Us</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Returns</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Site Map</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Specials</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Order History</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="row">
-
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-							<div class="wrap-footer-item">
-								<h3 class="item-header">We Using Safe Payments:</h3>
-								<div class="item-content">
-									<div class="wrap-list-item wrap-gallery">
-										<img src="assets/images/payment.png" style="max-width: 260px;">
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-							<div class="wrap-footer-item">
-								<h3 class="item-header">Social network</h3>
-								<div class="item-content">
-									<div class="wrap-list-item social-network">
-										<ul>
-											<li><a href="#" class="link-to-item" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-											<li><a href="#" class="link-to-item" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-											<li><a href="#" class="link-to-item" title="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-											<li><a href="#" class="link-to-item" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-											<li><a href="#" class="link-to-item" title="vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-							<div class="wrap-footer-item">
-								<h3 class="item-header">Dowload App</h3>
-								<div class="item-content">
-									<div class="wrap-list-item apps-list">
-										<ul>
-											<li><a href="#" class="link-to-item" title="our application on apple store"><figure><img src="assets/images/brands/apple-store.png" alt="apple store" width="128" height="36"></figure></a></li>
-											<li><a href="#" class="link-to-item" title="our application on google play store"><figure><img src="assets/images/brands/google-play-store.png" alt="google play store" width="128" height="36"></figure></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-				<div class="wrap-back-link">
-					<div class="container">
-						<div class="back-link-box">
-							<h3 class="backlink-title">Quick Links</h3>
-							<div class="back-link-row">
-								<ul class="list-back-link" >
-									<li><span class="row-title">Mobiles:</span></li>
-									<li><a href="#" class="redirect-back-link" title="mobile">Mobiles</a></li>
-									<li><a href="#" class="redirect-back-link" title="yphones">YPhones</a></li>
-									<li><a href="#" class="redirect-back-link" title="Gianee Mobiles GL">Gianee Mobiles GL</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Karbonn">Mobiles Karbonn</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Viva">Mobiles Viva</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Intex">Mobiles Intex</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Micrumex">Mobiles Micrumex</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Bsus">Mobiles Bsus</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Samsyng">Mobiles Samsyng</a></li>
-									<li><a href="#" class="redirect-back-link" title="Mobiles Lenova">Mobiles Lenova</a></li>
-								</ul>
-
-								<ul class="list-back-link" >
-									<li><span class="row-title">Tablets:</span></li>
-									<li><a href="#" class="redirect-back-link" title="Plesc YPads">Plesc YPads</a></li>
-									<li><a href="#" class="redirect-back-link" title="Samsyng Tablets" >Samsyng Tablets</a></li>
-									<li><a href="#" class="redirect-back-link" title="Qindows Tablets" >Qindows Tablets</a></li>
-									<li><a href="#" class="redirect-back-link" title="Calling Tablets" >Calling Tablets</a></li>
-									<li><a href="#" class="redirect-back-link" title="Micrumex Tablets" >Micrumex Tablets</a></li>
-									<li><a href="#" class="redirect-back-link" title="Lenova Tablets Bsus" >Lenova Tablets Bsus</a></li>
-									<li><a href="#" class="redirect-back-link" title="Tablets iBall" >Tablets iBall</a></li>
-									<li><a href="#" class="redirect-back-link" title="Tablets Swipe" >Tablets Swipe</a></li>
-									<li><a href="#" class="redirect-back-link" title="Tablets TVs, Audio" >Tablets TVs, Audio</a></li>
-								</ul>
-
-								<ul class="list-back-link" >
-									<li><span class="row-title">Fashion:</span></li>
-									<li><a href="#" class="redirect-back-link" title="Sarees Silk" >Sarees Silk</a></li>
-									<li><a href="#" class="redirect-back-link" title="sarees Salwar" >sarees Salwar</a></li>
-									<li><a href="#" class="redirect-back-link" title="Suits Lehengas" >Suits Lehengas</a></li>
-									<li><a href="#" class="redirect-back-link" title="Biba Jewellery" >Biba Jewellery</a></li>
-									<li><a href="#" class="redirect-back-link" title="Rings Earrings" >Rings Earrings</a></li>
-									<li><a href="#" class="redirect-back-link" title="Diamond Rings" >Diamond Rings</a></li>
-									<li><a href="#" class="redirect-back-link" title="Loose Diamond Shoes" >Loose Diamond Shoes</a></li>
-									<li><a href="#" class="redirect-back-link" title="BootsMen Watches" >BootsMen Watches</a></li>
-									<li><a href="#" class="redirect-back-link" title="Women Watches" >Women Watches</a></li>
-								</ul>
-
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="coppy-right-box">
-				<div class="container">
-					<div class="coppy-right-item item-left">
-						<p class="coppy-right-text">Copyright © 2020 Surfside Media. All rights reserved</p>
-					</div>
-					<div class="coppy-right-item item-right">
-						<div class="wrap-nav horizontal-nav">
-							<ul>
-								<li class="menu-item"><a href="about-us.html" class="link-term">About us</a></li>								
-								<li class="menu-item"><a href="privacy-policy.html" class="link-term">Privacy Policy</a></li>
-								<li class="menu-item"><a href="terms-conditions.html" class="link-term">Terms & Conditions</a></li>
-								<li class="menu-item"><a href="return-policy.html" class="link-term">Return Policy</a></li>								
-							</ul>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<script src="assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4"></script>
-	<script src="assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/chosen.jquery.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-	<script src="assets/js/jquery.countdown.min.js"></script>
-	<script src="assets/js/jquery.sticky.js"></script>
-	<script src="assets/js/functions.js"></script>
+</header>
 
 
-	@livewireScripts
+
+
+<!-- ========================================================================= -->
+
+<div class="main_dropdown_container">
+   
+  
+    <div class="dropdown_logo_bar_li" onclick="toggle_bar()" id="toggle_bar" ><i class="fas fa-bars dropdown_logo_bar bar " ></i></div>
+
+    <nav class="navbar_container toggle">
+            <div class="main_navbar">
+               
+                <ul class="main_navbar_ul">
+                
+                    <li class="navbar_level_1_li"><a href="" class="navbar_level_1_link">Electronics</a></li>
+                    <li class="navbar_level_1_li"><a href="" class="navbar_level_1_link">Furniture</a></li>
+                    <li class="navbar_level_1_li ">
+                        <a href="" class="navbar_level_1_link">Clothes</a>
+                    
+                            <ul class="dropdown_level_1">
+
+                                    <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
+                                    <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
+                                    <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
+                                    <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
+
+
+
+                            </ul>
+
+                    
+                    </li>
+                    <li class="navbar_level_1_li">
+                        Mobiles
+
+
+                                <div class="mega_dropdown_container">
+
+                                        <div class="row row1">
+                                            <h2 class="mega_header">Mobiles</h2>
+                                            <ul class="mega_ul" id="first_ul">
+
+                                                <li class="mega_li"><a href="#" class="mega_links">Web Development</a></li>
+                                                <li class="mega_li"><a href="#" class="mega_links">Machine Learning</a></li>
+                                                <li class="mega_li"><a href="#" class="mega_links">Artificial Intelligence</a></li>
+                                                <li class="mega_li"><a href="#" class="mega_links">Cloud Computing</a></li>
+                                                <li class="mega_li"><a href="#" class="mega_links">Devops Insecure</a></li>
+                                            </ul>
+
+                                        </div>
+                                      
+                                        <div class="row row2">
+                                            <h2 class="mega_header">Security</h2>
+                                            <ul class="mega_ul li_border">
+                                               
+                                                <li class="mega_li"><a href="#" class="mega_links">Web Development</a></li>
+                                                <li class="mega_li"><a href="#" class="mega_links">Machine Learning</a></li>
+                                                <li class="mega_li"><a href="#" class="mega_links">Artificial Intelligence</a></li>
+                                                <li class="mega_li"><a href="#" class="mega_links">Cloud Computing</a></li>
+                                                <li class="mega_li"><a href="#" class="mega_links">Devops Insecure</a></li>
+                                            </ul>
+                                            
+                                        </div>
+
+                                        <div class="row row3">
+                                            <h2 class="mega_header">Cloud</h2>
+                                            <ul class="mega_ul li_border">
+
+                                                <li class="mega_li"><a href="#" class="mega_links">Web Development</a></li>
+                                                <li class="mega_li"><a href="#" class="mega_links">Machine Learning</a></li>
+                                                <li class="mega_li"><a href="#" class="mega_links">Artificial Intelligence</a></li>
+                                                <li class="mega_li"><a href="#" class="mega_links">Cloud Computing</a></li>
+                                                <li class="mega_li"><a href="#" class="mega_links">Devops Insecure</a></li>
+                                            </ul>
+                                            
+                                        </div>
+
+
+
+
+
+
+                                </div>
+
+
+                    
+                    </li>
+                    <li class="navbar_level_1_li"><a href="" class="navbar_level_1_link">New Releases</a></li>
+
+
+                </ul>
+
+
+
+            </div>
+    </nav>
+</div>
+
+
+
+
+
+<!-- ======================================= M A I N   C O N T E N T ========================================== -->
+
+
+
+
+<div class="shop_container">
+
+
+
+    <div class="categories_section">
+
+        <span class="breadcrumbs_1" >Home / Categories / Electronics</span>
+
+        <div class="all_categories">
+
+
+            <h3>Categories</h3>
+            <h2 class="category_sort_1">Fashion & Accessories</h2>
+            <h2 class="category_sort_1">Furniture and home decors</h2>
+            <h2 class="category_sort_1">digital Electronics</h2>
+            <h2 class="category_sort_1">Tools and equipements</h2>
+            <h2 class="category_sort_1">Console & gamess</h2>
+        </div>
+
+
+        <div class="brand">
+
+            <h3>Sub Categories</h3>
+
+            <hr class="hr_category">
+
+            <a href="" class="category_sort_wrapper">
+            <input type="checkbox"> <h6 class="category_sort">Fasion clothings</h6>
+            </a>
+
+            <a href="" class="category_sort_wrapper">
+                <input type="checkbox"> <h6 class="category_sort">Laptops</h6>
+            </a>
+
+            <a href="" class="category_sort_wrapper">
+                <input type="checkbox"> <h6 class="category_sort">Powerbanks & Chargers</h6>
+                </a>
+    
+            <a href="" class="category_sort_wrapper">
+                <input type="checkbox"> <h6 class="category_sort">CPUS</h6>
+            </a>
+
+
+            <a href="" class="category_sort_wrapper">
+                <input type="checkbox"> <h6 class="category_sort">GPUS</h6>
+                </a>
+    
+            <a href="" class="category_sort_wrapper">
+                <input type="checkbox"> <h6 class="category_sort">Fasion clothings</h6>
+            </a>
+
+
+        </div>
+
+        
+        <div class="brand">
+
+            <h3>Color</h3>
+
+            <hr class="hr_category">
+
+            <a href="" class="category_sort_wrapper">
+            <input type="checkbox"> <h6 class="category_sort">Red (271)</h6>
+            </a>
+
+            <a href="" class="category_sort_wrapper">
+                <input type="checkbox"> <h6 class="category_sort">Blue (331)</h6>
+            </a>
+
+            <a href="" class="category_sort_wrapper">
+                <input type="checkbox"> <h6 class="category_sort">Yellow (54)</h6>
+                </a>
+    
+            <a href="" class="category_sort_wrapper">
+                <input type="checkbox"> <h6 class="category_sort">Cyan (32)</h6>
+            </a>
+
+
+            <a href="" class="category_sort_wrapper">
+                <input type="checkbox"> <h6 class="category_sort">Ocean Blue (44)</h6>
+                </a>
+    
+            <a href="" class="category_sort_wrapper">
+                <input type="checkbox"> <h6 class="category_sort">white (46)</h6>
+            </a>
+
+
+        </div>
+
+
+
+
+    </div>
+
+    <!-- ----------------------------- D I V I S I O N ------------------------------------- -->
+
+    <div class="shop_products_section">
+
+
+
+           
+    <div class="products_container_wrapper">
+
+        
+
+        <div class="card_container products_swiper swiper" >
+
+            <div class="sort_by_wrapper">
+            
+                <h2>Digital Electronics</h2>
+    
+                <form action="">
+                    <select class="sorting_sys" name="" id="">
+                        <option value="">Default Sorting</option>
+                        <option value="">Price By high to low</option>
+                        <option value="">Price By low to high</option>
+                        <option value="">sory by popularity</option>
+                        <option value="">SORT BY trending</option>
+                    </select>
+    
+                    <select class="sorting_sys" name="" id="">
+                        <option value="">SORT BY page</option>
+                        <option value="">5</option>
+                        <option value="">10</option>
+                        <option value="">15</option>
+                    </select>
+                </form>
+                
+            </div>
+
+          
+                <div class="card_section_1 " >
+
+
+               
+
+                    <div class="card_1 swiper-slide ">
+                        <a href="">
+                            <div class="card_image_1"><img src="images/lenevo_laptop_1.webp" alt=""></div>
+                            <div class="card_panel">
+                                <div class="card_main_title_1"><h2>Lenevo Legion 5 Gaming Laptop </h2></div>
+            
+                                
+                                <div class="card_readmore"><span>$699</span></div>
+                                <button class="btn-buy_now"><a href="">BUY NOW</a></button>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="card_1 swiper-slide ">
+                        <a href="">
+                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
+                            <div class="card_panel">
+                                <div class="card_main_title_1"><h2>Sony Noice Canceling Headphones</h2></div>
+                            
+                                <div class="card_readmore"><span>$299</span></div>
+                                <button class="btn-buy_now"><a href="">BUY NOW</a></button>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                    <div class="card_1 swiper-slide ">
+                        <a href="">
+                            <div class="card_image_1"><img src="images/ps5_controller_1.jpg" alt=""></div>
+                            <div class="card_panel">
+                                <div class="card_main_title_1"><h2>PS5 CONTROLLER [white edition]</h2></div>
+                                
+                                <div class="card_readmore"><span>$199</span></div>
+                                <button class="btn-buy_now"><a href="">BUY NOW</a></button>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="card_1 swiper-slide ">
+                        <a href="">
+                            <div class="card_image_1"><img src="images/ps5_console_1.webp" alt=""></div>
+                            <div class="card_panel">
+                                <div class="card_main_title_1"><h2>Playstation 5 physical edition console</h2></div>
+                                
+                                <div class="card_readmore"><span>$499</span></div>
+                                <button class="btn-buy_now"><a href="">BUY NOW</a></button>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="card_1 swiper-slide ">
+                        <a href="">
+                            <div class="card_image_1"><img src="images/lenevo_laptop_1.webp" alt=""></div>
+                            <div class="card_panel">
+                                <div class="card_main_title_1"><h2>Asus Laptops SERIES</h2></div>
+                            
+                                <div class="card_readmore"><span>$899</span></div>
+                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="card_1 swiper-slide ">
+                        <a href="">
+                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
+                            <div class="card_panel">
+                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
+                            
+                                <div class="card_readmore"><span>$ 499</span></div>
+                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card_1 swiper-slide ">
+                        <a href="">
+                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
+                            <div class="card_panel">
+                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
+                            
+                                <div class="card_readmore"><span>$ 499</span></div>
+                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card_1 swiper-slide ">
+                        <a href="">
+                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
+                            <div class="card_panel">
+                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
+                            
+                                <div class="card_readmore"><span>$ 499</span></div>
+                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card_1 swiper-slide ">
+                        <a href="">
+                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
+                            <div class="card_panel">
+                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
+                            
+                                <div class="card_readmore"><span>$ 499</span></div>
+                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card_1 swiper-slide ">
+                        <a href="">
+                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
+                            <div class="card_panel">
+                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
+                            
+                                <div class="card_readmore"><span>$ 499</span></div>
+                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card_1 swiper-slide ">
+                        <a href="">
+                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
+                            <div class="card_panel">
+                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
+                            
+                                <div class="card_readmore"><span>$ 499</span></div>
+                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card_1 swiper-slide ">
+                        <a href="">
+                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
+                            <div class="card_panel">
+                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
+                            
+                                <div class="card_readmore"><span>$ 499</span></div>
+                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    
+
+                </div>
+
+            
+
+            </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<!-- ======================================= M A I N   C O N T E N T ========================================== -->
+
+
+
+<!--======================================= MAIN FOOTER =========================== -->
+
+
+<div class="footer_section">
+
+    <!--======================================= FOOTER TOP SECTION START =========================== -->
+            <div class="subscriber_head">
+    
+                <h1 id="free_daily_updates">Free Daily Updates</h1>
+    
+                
+                <form action="" class="subscriber_search_box" method="get"  >
+                    
+                    <input class="subscriber_search_bar" type="text" placeholder="Search for datasets, APIs, ">
+    
+               
+                    <button class="subscriber_button" type="submit" >Subscribe</button>
+            </form>
+    
+            </div>
+    
+            
+    <!--======================================= FOOTER TOP SECTION ENDS =========================== -->
+    
+    <!--======================================= FOOTER MID SECTION START =========================== -->
+    
+            <div class="subscriber_mid">
+    
+            <div class="first_para">
+                <div class="footer_logo"><h1>LOGO</h1></div>
+                        <div class="footer_para">
+                            
+                            <h3 id="footer_first_head">Start Your Jounery Now</h3>
+                            <br>
+                   
+                            <h5>Michael-Miller99@gmail.com</h5>
+                            <h5>www.Devlop-Security.com</h5>
+                       
+                        </div>
+    
+                   
+                    </div>
+              
+                    
+                 
+                    <div class = "vertical2"></div>   <div class = "horizontal"></div> 
+                    <div class="middle_para">
+                    
+                        <div class="footer_About">
+                            <h4 class="footer_About_para"><a class="footer_About_head" href="#">About</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Terms of use</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Privacy Policy</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Risk Of Factor</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Risk Of Factor</a></h5>
+    
+    
+                        </div>
+    
+                        <div class="footer_About">
+                                <h4 class="footer_About_para"><a class="footer_About_head" href="#">Policies</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Terms of use</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Privacy Policy</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Risk Of Factor</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Risk Of Factor</a></h5>
+                        </div>
+    
+                        <div class="footer_About">
+                            <h4 class="footer_About_para"><a class="footer_About_head" href="#">What's New</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Terms of use</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Privacy Policy</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Risk Of Factor</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Risk Of Factor</a></h5>
+    
+    
+                        </div>
+    
+                        <div class="footer_About">
+                                <h4 class="footer_About_para"><a class="footer_About_head" href="#">Legal</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Terms of use</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Privacy Policy</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Risk Of Factor</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Risk Of Factor</a></h5>
+                        </div>
+    
+    
+                    </div>
+    
+                    
+    
+                    
+                    <div class = "vertical"></div><div class = "horizontal2"></div> 
+    
+                <div class="last_para">
+    
+                    <div class="footer_last">
+                        <p class="quick_signup">Quick Signup</p>
+                        <h5 id="free_daily_updates">This 3 Minute Will Take Your Newslatter To Harry Potter House So Dont Forget To Subscribe</h5>
+                        <form action="" class="footer_form_mid" method="get"  >
+                    
+                            <input class="footer_mid_subscribe_bar" type="text" placeholder="Search for datasets, APIs, ">
+            
+                       
+                            <button class="footer_mid_subscriber_button" type="submit" >Subscribe</button>
+                    </form>
+                    </div>
+    
+                    <div class="contacts">
+                        <h4>Connect:
+                      
+                        </h4>
+                        <div class="icon_section">
+                        <a class="footer_mid_icons" href=""><i class="fab fa-twitter footer_mid_icons_inner"></i></a>
+                        <a class="footer_mid_icons" href=""><i class="fab fa-instagram footer_mid_icons_inner"></i></a>
+                        <a class="footer_mid_icons" href=""><i class="fab fa-linkedin footer_mid_icons_inner"></i></a>
+                        <a class="footer_mid_icons" href=""><i class="fab fa-youtube footer_mid_icons_inner"></i></a>
+                        <a class="footer_mid_icons" href=""><i class="fab fa-twitter footer_mid_icons_inner"></i></a>
+                    </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+    <!--======================================= FOOTER MID SECTION ENDS =========================== -->
+    
+    <!--======================================= FOOTER LAST SECTION START =========================== -->
+        <div class="subscriber_last">
+    
+    
+    
+            <div class="footer_logo_last"><h1>LOGO</h1></div>
+            <div class = "vertical3"></div>
+            <div class = "footer_last_mid_para"><p id="unleash">Unleash The Power Of Security And Development</p></div>
+            <div class = "footer_last_last_para">
+                <p class="copyright2">COPYRIGHT 2022 &copy; All right reserved</p>
+                <p class="copyright2">ALL Trademark are registered to their respective owners bros</p>
+            </div>
+    
+        </div>
+    <!--======================================= FOOTER LAST SECTION ENDS =========================== -->
+    
+    </div>
+    
+    <!--======================================= MAIN FOOTER ENDS =========================== -->
+    
+
+
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+
+        let toggle = document.getElementsByClassName('toggle_bar');
+
+        function toggle_bar() {
+
+         let element = document.querySelector(".toggle");
+         element.classList.toggle("show")
+         
+         let element2 = document.querySelector(".bar")
+         element2.classList.toggle("bar2")
+        
+         
+          
+            
+            
+        }
+
+        
+    
+
+</script>
+
+
+
+
 
 </body>
 </html>
