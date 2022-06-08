@@ -18,6 +18,15 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        /* flash cart items */
+         \Illuminate\Auth\Events\Attempting::class => [
+            \App\Listeners\PrepareCartTransfer::class
+        ],
+        /* add flashed cart items to authenticated user cart */
+        \Illuminate\Auth\Events\Login::class => [
+            \App\Listeners\TransferGuestCartToUser::class
+        ]
+        /* end cart item */
     ];
 
     /**

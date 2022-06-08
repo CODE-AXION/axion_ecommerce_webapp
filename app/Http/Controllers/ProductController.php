@@ -32,4 +32,34 @@ class ProductController extends Controller
                                     
     }
 
+    public function cart_index()
+    {
+
+        return view('cart');
+                                    
+    }
+
+
+    
+    public function show_product_details($sku,$slug)
+    {        
+
+        // dd($sku);
+
+        $product = Product::where(['sku'=> $sku,'slug'=> $slug])->first();        
+        
+        $popular_products = Product::latest()->limit(4)->get();
+
+        $related_products = Product::where('category_id',$product->category_id)
+                                        ->where('sku', '!=', $sku)
+                                        ->inRandomOrder()->limit(5)->get();  
+
+
+        return view('/show_products')->with('product',$product)
+                                     ->with('popular_products',$popular_products)
+                                     ->with('related_products',$related_products);
+        
+        
+    }
+
 }

@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href=" {{asset('/assets/css/style2.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" > -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" >
-    <link rel="stylesheet" href="owl.carousel.min.css">
-    <link rel="stylesheet" href="owl.theme.default.min.css">
+ 
+
+    @livewireStyles
 
 </head>
 <body>
@@ -36,6 +37,12 @@
 
     </div>  <label for="show_search" class="search_icon"><i class="fas fa-search"></i></label>
 
+
+
+
+    @if(Auth::guard('web')->check())
+ 
+
 <div class="ecommerce_account_wrapper">
     <div class="your_account_wrapper">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
@@ -57,7 +64,7 @@
                       </svg>
 
 
-                     <h5 class="common_acc" > Account </h5>
+                     <h5 class="common_acc" >{{Auth::guard('web')->user()->name}} </h5>
                     
                     </li>
 
@@ -115,7 +122,15 @@
                                   </svg>
             
             
-                                 <h5 class="common_acc" > Sign Out </h5>
+                                 <h5 class="common_acc" > 
+                                 
+                                    
+                                     <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <button class="btn-logout" type="submit">Sign Out</button>
+                                      </form>
+                                    
+                                    </h5>
                                 
                                 </li>
             
@@ -156,13 +171,16 @@
         <h6 class="shopping_cart">Cart</h6>
     </div>
 </div>
-<!-- 
+
+   
+    @else
     <div class="login_btn">
-        <a class="cta" href=""><button class="btn_sign btn_2">Login</button></a>
+        <a class="cta" href="{{route('login')}}"><button class="btn_sign btn_2">Login</button></a>
     </div>
     <div class="login_btn" >
-        <a class="cta" href=""><button class="btn_sign">Join</button></a>
-    </div> -->
+        <a class="cta" href="{{route('register')}}"><button class="btn_sign">Join</button></a>
+    </div> 
+    @endif
 
 
 </header>
@@ -380,197 +398,7 @@
 
         
 
-        <div class="card_container products_swiper swiper" >
-
-            <div class="sort_by_wrapper">
-            
-                <h2>Digital Electronics</h2>
-    
-                <form action="">
-                    <select class="sorting_sys" name="" id="">
-                        <option value="">Default Sorting</option>
-                        <option value="">Price By high to low</option>
-                        <option value="">Price By low to high</option>
-                        <option value="">sory by popularity</option>
-                        <option value="">SORT BY trending</option>
-                    </select>
-    
-                    <select class="sorting_sys" name="" id="">
-                        <option value="">SORT BY page</option>
-                        <option value="">5</option>
-                        <option value="">10</option>
-                        <option value="">15</option>
-                    </select>
-                </form>
-                
-            </div>
-
-          
-                <div class="card_section_1 " >
-
-
-               
-
-                    <div class="card_1 swiper-slide ">
-                        <a href="">
-                            <div class="card_image_1"><img src="images/lenevo_laptop_1.webp" alt=""></div>
-                            <div class="card_panel">
-                                <div class="card_main_title_1"><h2>Lenevo Legion 5 Gaming Laptop </h2></div>
-            
-                                
-                                <div class="card_readmore"><span>$699</span></div>
-                                <button class="btn-buy_now"><a href="">BUY NOW</a></button>
-                            </div>
-                        </a>
-                    </div>
-
-
-                    <div class="card_1 swiper-slide ">
-                        <a href="">
-                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
-                            <div class="card_panel">
-                                <div class="card_main_title_1"><h2>Sony Noice Canceling Headphones</h2></div>
-                            
-                                <div class="card_readmore"><span>$299</span></div>
-                                <button class="btn-buy_now"><a href="">BUY NOW</a></button>
-                            </div>
-                        </a>
-                    </div>
-
-
-
-                    <div class="card_1 swiper-slide ">
-                        <a href="">
-                            <div class="card_image_1"><img src="images/ps5_controller_1.jpg" alt=""></div>
-                            <div class="card_panel">
-                                <div class="card_main_title_1"><h2>PS5 CONTROLLER [white edition]</h2></div>
-                                
-                                <div class="card_readmore"><span>$199</span></div>
-                                <button class="btn-buy_now"><a href="">BUY NOW</a></button>
-                            </div>
-                        </a>
-                    </div>
-
-
-                    <div class="card_1 swiper-slide ">
-                        <a href="">
-                            <div class="card_image_1"><img src="images/ps5_console_1.webp" alt=""></div>
-                            <div class="card_panel">
-                                <div class="card_main_title_1"><h2>Playstation 5 physical edition console</h2></div>
-                                
-                                <div class="card_readmore"><span>$499</span></div>
-                                <button class="btn-buy_now"><a href="">BUY NOW</a></button>
-                            </div>
-                        </a>
-                    </div>
-
-
-                    <div class="card_1 swiper-slide ">
-                        <a href="">
-                            <div class="card_image_1"><img src="images/lenevo_laptop_1.webp" alt=""></div>
-                            <div class="card_panel">
-                                <div class="card_main_title_1"><h2>Asus Laptops SERIES</h2></div>
-                            
-                                <div class="card_readmore"><span>$899</span></div>
-                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
-                            </div>
-                        </a>
-                    </div>
-
-
-                    <div class="card_1 swiper-slide ">
-                        <a href="">
-                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
-                            <div class="card_panel">
-                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
-                            
-                                <div class="card_readmore"><span>$ 499</span></div>
-                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card_1 swiper-slide ">
-                        <a href="">
-                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
-                            <div class="card_panel">
-                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
-                            
-                                <div class="card_readmore"><span>$ 499</span></div>
-                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card_1 swiper-slide ">
-                        <a href="">
-                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
-                            <div class="card_panel">
-                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
-                            
-                                <div class="card_readmore"><span>$ 499</span></div>
-                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card_1 swiper-slide ">
-                        <a href="">
-                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
-                            <div class="card_panel">
-                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
-                            
-                                <div class="card_readmore"><span>$ 499</span></div>
-                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card_1 swiper-slide ">
-                        <a href="">
-                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
-                            <div class="card_panel">
-                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
-                            
-                                <div class="card_readmore"><span>$ 499</span></div>
-                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card_1 swiper-slide ">
-                        <a href="">
-                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
-                            <div class="card_panel">
-                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
-                            
-                                <div class="card_readmore"><span>$ 499</span></div>
-                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card_1 swiper-slide ">
-                        <a href="">
-                            <div class="card_image_1"><img src="images/sony_headphones.jpg" alt=""></div>
-                            <div class="card_panel">
-                                <div class="card_main_title_1"><h2>Sony Headphones</h2></div>
-                            
-                                <div class="card_readmore"><span>$ 499</span></div>
-                                 <button class="btn-buy_now"><a href="">BUY NOW</a></button>
-                            </div>
-                        </a>
-                    </div>
-
-
-                    
-
-                </div>
-
-            
-
-            </div>
-    </div>
+        @livewire('products.product-index')
 
     </div>
 
@@ -764,7 +592,7 @@
 </script>
 
 
-
+@livewireScripts
 
 
 </body>

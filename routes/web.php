@@ -29,6 +29,8 @@ Route::get('/dashboard', function () {
 
 Route::get('/home', [ProductController::class, 'home']);
 Route::get('/shop', [ProductController::class, 'shop_index'])->name('shop.index');
+Route::get('/cart', [ProductController::class, 'cart_index'])->name('product.cart');
+Route::get('/products/{sku}/{slug}', [ProductController::class, 'show_product_details'])->name('product.show');
 
 
 require __DIR__.'/auth.php';
