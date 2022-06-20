@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Product;
 use App\Models\Category;
+use Cart;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -35,23 +36,30 @@ class ProductController extends Controller
     public function cart_index()
     {
 
+            
+        
+          
+
+
         return view('cart');
                                     
     }
 
 
     
-    public function show_product_details($sku,$slug)
+    public function show_product_details($id,$slug)
     {        
 
-        // dd($sku);
+       
 
-        $product = Product::where(['sku'=> $sku,'slug'=> $slug])->first();        
+       
+
+        $product = Product::where(['id'=> $id,'slug'=> $slug])->first();        
         
         $popular_products = Product::latest()->limit(4)->get();
 
         $related_products = Product::where('category_id',$product->category_id)
-                                        ->where('sku', '!=', $sku)
+                                        ->where('id', '!=', $id)
                                         ->inRandomOrder()->limit(5)->get();  
 
 

@@ -5,9 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cart_Item extends Model
+class Shipping extends Model
 {
-    public $table="cart_items"; 
-    protected $fillable = ['product_id','user_id','quantity','session_id','rowId'];
     use HasFactory;
 }

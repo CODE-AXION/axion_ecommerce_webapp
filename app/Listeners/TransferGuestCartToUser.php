@@ -41,19 +41,71 @@ class TransferGuestCartToUser
                 // dd($guestCart);
                 // dd($session_id_store);
                 // // $guestCartItems = $guestCart->toArray();
+             
+                //COMMENTED OUT - IN DEVELOPMENT CODE
+
                 foreach($guestCart as $guestCartitem){
               
                    
-    
-                    Cart_Item::create([
-                        'product_id' => $guestCartitem->id,
-                        'session_id' => $session_id_store,
-                        'user_id' => Auth::user()->id,
-                    ]);
+                    // $product = Cart_Item::where('user_id', '!=', Auth::user()->id)
+                    //                                                 ->where('product_id','=',$guestCartitem->id)->exists();
+                        $product = Cart_Item::find($guestCartitem->id);
+                        $user_1 = Cart_Item::find(Auth::user()->id);
+
+                            if($product == true or $user_1 == false ){
+
+                                if(Auth::check()){
+                                  
+                                    Cart_Item::UpdateOrCreate([
+                                        'product_id' => $guestCartitem->id,
+                                        'session_id' => $session_id_store,
+                                        'quantity' => $guestCartitem->qty + 1,
+                                        'rowId' => $guestCartitem->rowId,
+                                        'user_id' => Auth::user()->id,
+                                    ]);
+                             
+                                    // $product_1 = Cart_Item::where('session_id', '!=', $session_id_store)
+                                    // ->where('product_id', '=', $guestCartitem->id)
+                                    // ->where('user_id', '=',Auth::user()->id)
+                                    // ->delete();
+                            }
+
+                        }
+
+                       
+                            
+                            
+                          
+                            // dd($CHECK);   
+                     
+
+                        // if(Auth::check()){
+                        //     $product_1 = Cart_Item::where('user_id', '=', Auth::user()->id);
+                    
+                        //     $product_2 = Cart_Item::where('product_id', '=', $guestCartitem->id)->exists();
+        
+                        //     if($product_1 && $product_2){
+                            
+                        //         $product_2 = Cart_Item::where('product_id', '=', $guestCartitem->id)->delete();
+        
+                        //     }
+
+
+                        // }
+                       
+                        
+                    }
+
+                    // if($product_1 = Cart_Item::where('product_id', '=', $guestCartitem->id)->exists()){
+                    //     $product_1 = Cart_Item::where('product_id', '=', $guestCartitem->id)->delete();
+                    // }
                 }
-    
+                // if(Auth::check()){
+                // $product = Cart_Item::where('session_id', '!=', $session_id_store)->delete();
+                // //COMMENTED OUT - IN DEVELOPMENT CODE
+                // }
                 // dd($guestCart);
-            }
+            
 
          
 
@@ -61,17 +113,17 @@ class TransferGuestCartToUser
 
 
          if ($userCart->isNotEmpty() && !empty($guestCart)) {
+                //COMMENTED OUT - IN DEVELOPMENT CODE
+                            //     foreach($guestCart as $guestCartitem){
+                            
+                            //     // dd($cart__items);
 
-                foreach($guestCart as $guestCartitem){
-              
-                // dd($cart__items);
-
-                Cart_Item::firstOrCreate([
-                    'product_id' => $guestCartitem->id,
-                    'user_id' => Auth::user()->id,
-                ]);
-             }// dd($guestCartItems);
-
+                            //     Cart_Item::firstOrCreate([
+                            //         'product_id' => $guestCartitem->id,
+                            //         'user_id' => Auth::user()->id,
+                            //     ]);
+                            // }// dd($guestCartItems);
+                //COMMENTED OUT - IN DEVELOPMENT CODE
 
                 // $maxUserCartId = max(array_column($userCartItems, 'id'));
 

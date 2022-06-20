@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" >
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style2.css')}}">
 
+    @livewireStyles
 </head>
 <body>
     
@@ -291,154 +292,27 @@
 
 <div class="product_details_body">
 
-        <div class="products_details_container">
-
-        
-            <div class="checkout_section_grid">
-            
-                <div class="shopping_cart_wrapper">
-
-
-
-                    <div class="cart_title_nav_wrapper">
-                        <h2 class="cart_title_nav_1" >Shopping Cart</h2>
-                        <h3 class="cart_title_nav_2" >3 items</h3>
-
-
-                    </div>
-                    <div class="select_all_cart_items">
-                        
-                        <a  href="">Select All Cart Items</a>
-                        <hr> 
-                    </div>
-                    <div class="cart_table">
-
-
-                    
-
-                        @foreach (Cart::content() as $cart_item)
-                        {{-- {{dd(Cart::content() )}} --}}
-                 
-                            
-                       
-                        
-                        <div class=" checkout_cart_item">
-                    
-                            <div class="checkout_image_title_wrapper">
-
-                                <div class="select_cart_items">
-                                <input type="checkbox">
-                                </div>
-
-                                <div class="checkout_cart_item_image">
-
-                                    <img class="checkout_image" src="/ecommerce_layouts/images/sony_headphones.jpg" alt="">
-                                </div>
-
-                                
-                                <div class="checkout_cart_item_details_wrapper">
-
-                                    <h2 class="checkout_item_title" >{{$cart_item->name}}</h2>
-                                    <div class="checkout_item_details">
-                                    <h2>$299.00</h2>
-
-                                    <h4>In Stock</h4>
-                                        <div class="last_row_details">
-                                                <select class="quantity_select_option" name="" id="">
-                                                    <option value="">Qty: 1</option>
-                                                    <option value="">2</option>
-                                                    <option value="">3</option>
-                                                    <option value="">4</option>
-                                                    <option value="">5</option>
-                                                </select>
-
-                                                <span class="save_for_later" >SAVE FOR LATER</span>
-                                                <a class="remove_item" href="">Remove Item</a>
-                                        </div>     
-                                    </div> 
-                                </div>   
-                                
-
-                            </div>
-
-
-                                
-                                
-                                    
-
-                        </div>
-                 
-
-                        @endforeach
-                      
-
-
-
-
-
-
-                    </div>
-
-
-
-                </div>
-                
-
-                <div class="checkout_wrapper">
-                    <h2 class="order-summary">order summary</h2>
-
-                    <div class="calculation_wrapper">
-                        <div class="flex-checkout sub_total">
-                            <p class="total_calculation-text" >Sub total (4 Items)</p>
-                            <p class="total_calculation-text" >$500.00</p>
-                        </div>
-                    
-                        <div class="flex-checkout shipping_total">
-                            <p class="total_calculation-text" >Shipping</p>
-                            <p class="total_calculation-text" >$60.00</p>
-                        </div>
-                        <hr>
-                        <div class="flex-checkout tax">
-                            <p class="total_calculation-text" >Tax</p>
-                            <p class="total_calculation-text" >$30.00</p>
-                        </div>
-
-                        <div class="flex-checkout tax">
-                            <p class="total_calculation-text save" >You Save</p>
-                            <p class="total_calculation-text" >$29.00</p>
-                        </div>
-
-                        <div class="discount_coupan_calculation">
-                            <input class="input_coupan" type="text" placeholder="DISCOUNT COUPON">
-                            <button class="btn-coupan">Apply Coupon</button>
-
-                        </div>
-
-                        <div class="flex-checkout tax">
-                            <p>Grand Total</p>
-                            <p><b>$580.00</b></p>
-                        </div>
-
-                        <div class="flex-checkout-btn checkout_button">
-                            <button class=" btn-checkout"><span class=" btn-checkout-text"> Proceed To Buy</span></button>
-                        </div>
-
-                        <div class="flex-checkout small_text">
-                            <p class="" ><a class="small_text" href="">Empty Cart ( X )</a></p>
-                            <p class="" ><a class="small_text" href="">Continue Shopping</a></p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-        </div>
+    @livewire('products.cart-details')
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -617,14 +491,27 @@
                 
             }
     
-            
+        function increaseValue() {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById('number').value = value;
+        }
+
+        function decreaseValue() {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 0 : value;
+        value < 1 ? value = 1 : '';
+        value--;
+        document.getElementById('number').value = value;
+        }
            
     
     </script>
     
 
 
-
+@livewireScripts
 
     </body>
     </html>

@@ -3,11 +3,22 @@
 
 
 
+
+
+    
+
     <div class="card_container products_swiper swiper" >
 
         <div class="sort_by_wrapper">
+
+            @if(Route::is('shop.index'))
+            <h2>Shop</h2>
+		@elseif(Route::is('public_Category.show'))
+			{{-- <li class="item-link"><span>category</span></li> --}}
+            <h2>{{$categoryName}}</h2>
+		@endif
         
-            <h2>Digital Electronics</h2>
+         
 
             <form action="">
                 <select wire:model="sortBy" class="sorting_sys" name="" id="">
@@ -38,11 +49,12 @@
            
 
                 <div class="card_1 swiper-slide ">
-                    <a href="{{route('product.show',['slug'=> $product->slug,'sku'=>$product->SKU])}}">
+                    <a href="{{route('product.show',['id'=> $product->id,'slug'=>$product->slug])}}">
                         <div class="card_image_1"><img src="images/lenevo_laptop_1.webp" alt=""></div>
                         <div class="card_panel">
                             <div class="card_main_title_1"><h2>{{Str::limit($product->name,40)}}</h2></div>
         
+                            
                             
                             <div class="card_readmore"><span>{{$product->sale_price}}</span></div>
                             <button class="btn-buy_now"><a href="#" wire:click.prevent="store({{ $product->id }}, '{{ $product->name }}','{{ $product->sale_price }}')" >Add To Cart</a></button>
@@ -65,6 +77,6 @@
     
 
 
-{!!$products->links()!!}
+
 	
 </div>

@@ -4,29 +4,54 @@ namespace App\Http\Livewire\Products;
 
 use Livewire\Component;
 
+
 use Auth; 
 use Session;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Cart_Item;
 use WithPagination;
-use Sessions;
+
 use Cart;
 
-class ProductIndex extends Component
+class ShopComponent extends Component
 {
 
+    
     public $category_slug;
+    public $category_id;
+
+    // public $currentUrl;
+
+    // public $search;
+ 
+    // protected $addQuery = ['category'];
+
 
     public $sortBy = '';
     public $perPage = 3;
 
-    public function mount($category_slug = false)
-{
+    // public $category;
+ 
+    public function mount($category_slug = false,$category_id = false)
+    {
+        $this->category_slug = $category_slug;
+    
+        $this->category_id = $category_id;
+    }
+    // public function mount($queryString)
+    // {
+       
+        
 
-	$this->category_slug = $category_slug;
+    // }
 
-}
+
+    // public function mount($category_slug = false){
+
+       
+	//     $this->category_slug = $category_slug;
+    // }
 
 
 
@@ -170,26 +195,41 @@ class ProductIndex extends Component
         //     'data' => cart()->getContent() // i have a global cart() function in my app which sets the correct session
         // ]);
 
-        return redirect()->route('shop.index');
+        return redirect()->back()->with('message','Product ' .$product_name .'has been added to your cart');
 
     }
 
-    
+
+
+
+
+
+
+
+
+
+
+
 
 
     public function render()
     {
 
-        $categoryName = '';
 
-            if ($this->category_slug) {
-    dd($this->category_slug);
-                $category = Category::where('slug', $this->category_slug)->first();
-                dd($category);
+  
+        $categoryName = '';
+        
+            if ($this->category_slug && $this->category_id) {
+             
+                   
+                $category = Category::where('slug', $this->category_slug)
+                                    ->where('id',$this->category_id)
+                                    ->first();
+                // dd($category->id);
 	        	$categoryId = $category->id;
 	         	$categoryName = $category->name;
 
-                dd($categoryName);
+                // dd($categoryName);
 
                  switch ($this->sortBy) {
                     case 'featured':
@@ -208,48 +248,63 @@ class ProductIndex extends Component
                         $products = Product::where('category_id',$categoryId)->paginate($this->perPage);
                 }
 
+            }else{
+                
+                switch ($this->sortBy) {
+                    case 'featured':
+                        $products = Product::where('featured', '1')->paginate($this->perPage);
+                        break;
+                    case 'low':
+                        $products = Product::orderBy('sale_price', 'asc')->paginate($this->perPage);
+                        break;
+                    case 'heigh':
+                        $products = Product::orderBy('sale_price', 'desc')->paginate($this->perPage);
+                        break;
+                    case '0':
+                        $products = Product::paginate($this->perPage);
+    
+                    default:
+                        $products = Product::paginate($this->perPage);
+                }
+            }
 
 
-
-        }else{
+        // }else{
        
 
-            switch ($this->sortBy) {
+        //     switch ($this->sortBy) {
                 
-                case 'featured':
-                    $products = Product::where('featured', '1')->paginate($this->perPage);
-                    break;
-                case 'low':
-                    $products = Product::orderBy('sale_price', 'asc')->paginate($this->perPage);
-                    break;
-                case 'heigh':
-                    $products = Product::orderBy('sale_price', 'desc')->paginate($this->perPage);
-                    break;
-                case '0':
-                    $products = Product::paginate($this->perPage);
+        //         case 'featured':
+        //             $products = Product::where('featured', '1')->paginate($this->perPage);
+        //             break;
+        //         case 'low':
+        //             $products = Product::orderBy('sale_price', 'asc')->paginate($this->perPage);
+        //             break;
+        //         case 'heigh':
+        //             $products = Product::orderBy('sale_price', 'desc')->paginate($this->perPage);
+        //             break;
+        //         case '0':
+        //             $products = Product::paginate($this->perPage);
 
-                default:
-                    $products = Product::paginate($this->perPage);
-            }
-        }
-
-        
-        $categories = Category::all();
-
-        // if(Auth::check()){
-
-        //     Cart::instance('shoppingcart')->store('emali');
-        //     // Cart::instance('shoppingcart')->store(Auth::user()->email);
+        //         default:
+        //             $products = Product::paginate($this->perPage);
+        //     }
         // }
 
-        return view('livewire.products.product-index',[
 
-            
-            'products' => $products,
+
+
+
+
+        $categories = Category::all();
+        // $products = Product::all();
+
+        return view('livewire.products.shop-component',[
+
             'categories'=> $categories,
-            'categoryName'=>$categoryName,
-        
-
+            'categoryName'=> $categoryName,
+            
+            'products'=> $products,
         ]);
     }
 }

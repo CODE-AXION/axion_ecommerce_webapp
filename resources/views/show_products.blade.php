@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" >
     <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}} ">
     <link rel="stylesheet" href="{{asset('assets/css/owl.theme.default.min.css')}}">
-
+    @livewireStyles
 </head>
 <body>
     
@@ -278,153 +278,6 @@
 <div class="products_details_container">
 
 
-        <div class="product_showcase_wrapper">
-
-            <div class="showcase_images">
-                   
-                <div class="single_image_card">
-                        <div class="product_showcase_single">
-                            <img class="single_image_showcase" src="/ecommerce_layouts/images/sony_headphones.jpg" alt="">
-                        </div>
-                </div>
-
-                    <div class="product_showcase_multiple  owl-carousel owl-theme ">
-
-                    
-
-                        <div class="product_images_card">
-                            <div class="multiple_images_showcase">
-                                <img  class="img_details img_details_1" src="/ecommerce_layouts/images/sony_headphones.jpg" alt="">
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="product_images_card">
-                            <div class="multiple_images_showcase">
-                                <img class="img_details img_details_1"  src="/ecommerce_layouts/images/beats_1.png" alt="">
-                            </div>
-                        </div>
-
-                        
-                        <div class="product_images_card">
-                            <div class="multiple_images_showcase">
-                                <img  class="img_details img_details_1" src="/ecommerce_layouts/images/PS5_pngformate.png" alt="">
-                            </div>
-                        </div>
-
-                        <div class="product_images_card">
-                            <div class="multiple_images_showcase">
-                                <img class="img_details img_details_1"  src="/ecommerce_layouts/images/sony_headphones.jpg" alt="">
-                            </div>
-                        </div>
-
-                        
-                        <div class="product_images_card">
-                            <div class="multiple_images_showcase">
-                                <img  class="img_details img_details_1" src="/ecommerce_layouts/images/sony_headphones.jpg" alt="">
-                            </div>
-                        </div>
-
-                    </div>
-
-                 </div>
-
-
-                <div class="product_short_details">
-
-
-                    <h2>{{$product->name}}</h2>
-
-                        <div class="rating_system_wrapper">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span>(05 reviews)</span>
-                        </div>
-
-                            <div class="product_price_wrapper">
-
-                                <div>M.R.P <span class="regular_price"> ${{$product->regular_price}}</span></div>
-
-                                <div><span class="sale_price_text"> Price </span> <span class="sale_price">${{$product->sale_price}}</span></div>
-
-                                @if ($product->stock_status == -1)
-                                <div class="in_stock_wrapped"> Availability: <span class="in_stock" > Out Of Stock </span></div> 
-                                @else
-                                <div class="in_stock_wrapped"> Availability: <span class="in_stock" > In Stock </span></div> 
-                                @endif
-                            
-
-                            </div>
-
-                                <div class="brand_short_description_wrapper">
-                                    
-                                    <ul>
-                                        <li class="short_description_list" >{{$product->short_description}}</li>
-                                    
-                                    </ul>
-
-                                </div>
-
-                    <div class="carts_wishlists_buttons_wrapper">
-
-                        <button class="add_to_cart"><a class="add_to_cart_text" href="cart.html">ADD TO CART</a></button>
-                        <button class="add_to_wishlist"><a class="add_to_wishlist_text" href="">ADD TO WISHLIST</a></button>
-
-                    </div>
-
-                </div>
-
-                <div class="additional_details_wrapper">
-            
-                <input type="radio" hidden name="slider" checked id="long_description_bullet">
-                <input type="radio" hidden name="slider" id="additional_information_bullet">
-                <input type="radio" hidden name="slider" id="misc_bullet">
-        
-                <nav>
-                    <label for="long_description_bullet" class="long_description_bullet">Long Description</label>
-                    <label for="additional_information_bullet" class="additional_information_bullet">Product Details</label>
-                    <label for="misc_bullet" class="misc_bullet">Misc</label>
-                    <div class="slider"></div>
-                </nav>
-        
-                <section class="addition--content">
-        
-                    <div class="content content-1">
-                        <p>
-        
-                        {{$product->description}}
-        
-                        </p>
-                    </div>
-        
-                    <div class="content content-2">
-        
-        
-        
-                        <p>  {{$product->product_details}}</p>
-                    </div>
-        
-                    <div class="content content-3">
-                        <p>Lorem ipsum dolor sit amet, an milique, et blandit scriptorem tatibus mea. Vis quaeque ocurreret ea.cu bus scripserit, modus voluptaria ex per. 
-                            
-                            </p>
-                    </div>
-        
-        
-                </section>
-        
-    
-            </div>
-    
-
-
-
-
-        </div>
-    
 
 
 
@@ -432,7 +285,7 @@
 
 
 
-
+    @livewire('products.product-details', ['product' => $product] )
 
 
 
@@ -462,7 +315,7 @@
                 
             
             <div class="card_1 swiper-slide ">
-                <a href="{{route('product.show',['slug'=> $p_product->slug,'sku'=>$p_product->SKU])}}">
+                <a href="{{route('product.show',['id'=> $p_product->id,'slug'=>$p_product->slug])}}">
                     <div class="card_image_1"><img src="images/lenevo_laptop_1.webp" alt=""></div>
                     <div class="card_panel">
                         <div class="card_main_title_1"><h2>{{Str::limit($p_product->name,40)}}</h2></div>
@@ -505,7 +358,7 @@
             
         
         <div class="card_1 swiper-slide ">
-            <a href="{{route('product.show',['slug'=> $r_product->slug,'sku'=>$r_product->SKU])}}">
+            <a href="{{route('product.show',['id'=> $r_product->id,'slug'=>$r_product->slug])}}">
                 <div class="card_image_1"><img src="images/lenevo_laptop_1.webp" alt=""></div>
                 <div class="card_panel">
                     <div class="card_main_title_1"><h2>{{Str::limit($r_product->name,40)}}</h2></div>
@@ -743,6 +596,7 @@
     </script>
     
 
+    @livewireScripts
 
 
 
