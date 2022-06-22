@@ -100,6 +100,26 @@ class CartDetails extends Component
 
     }
 
+    public function checkout()
+    {
+        if(Auth::check()){
+            return redirect()->route('checkout.index');
+        }else{
+            return redirect()->route('login', ['register' => 'checkout'] );
+           
+        }
+    }
+
+    public function setAmountCheckout()
+    {
+        if(!Session::has('coupan')){
+
+        
+            dd($valuee);
+        }
+
+    }
+
     public function decreaseQuantity($rowId)
     {
         $cart_item = Cart::get($rowId);

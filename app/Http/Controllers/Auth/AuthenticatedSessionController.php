@@ -8,17 +8,21 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Cart;
+use Session;
 
 class AuthenticatedSessionController extends Controller
 {
+ 
+
     /**
      * Display the login view.
      *
      * @return \Illuminate\View\View
      */
-    public function create()
+    public function create($register)
     {
-        return view('auth.login');
+
+        return view('auth.login')->with('register',$register);
     }
 
     /**
@@ -27,13 +31,28 @@ class AuthenticatedSessionController extends Controller
      * @param  \App\Http\Requests\Auth\LoginRequest  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(LoginRequest $request)
+
+
+
+
+    public function store(LoginRequest $request,$register)
     {
+
+
         $request->authenticate();
+        // dd($register);
+        if($register == 'checkout'){
+            return redirect()->route('checkout.index');
+        }else{
 
         // $request->session()->regenerate();
-
-        return redirect()->intended(RouteServiceProvider::HOME);
+            
+        return redirect()->route('shop.index');
+        }
+           
+   
+        
+      
     }
 
     /**

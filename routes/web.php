@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CheckoutController;
 
 use App\Http\Livewire\Products\ShopComponent;
 use App\Http\Livewire\Products\CategoryComponent;
@@ -31,6 +32,11 @@ Route::get('/dashboard', function () {
 // Route::view('home','/home');
 
 //HOME PAGE VIEWS
+
+Route::group(['middleware' => ['auth']], function (){
+    Route::get('/checkout', [CheckoutController::class, 'checkout_index'])->name('checkout.index');
+   }
+  );
 
 Route::get('/home', [ProductController::class, 'home']);
 // Route::get('/shop', [ProductController::class, 'shop_index'])->name('shop.index');

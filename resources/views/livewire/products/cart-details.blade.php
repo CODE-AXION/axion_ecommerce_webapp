@@ -144,7 +144,23 @@
                     </div>
 
                     <div class="flex-checkout-btn checkout_button">
-                        <button class=" btn-checkout"><span class=" btn-checkout-text"> Proceed To Buy</span></button>
+                        
+                        {{-- @if(!Auth::check())
+                       <button class=" btn-checkout"><a href="{{route('login')}}"><span class=" btn-checkout-text"> Proceed To Buy</span></a> </button>
+                       
+                      
+                        
+                        @else
+                     <button class=" btn-checkout"><a href="{{route('checkout.index')}}"><span class=" btn-checkout-text"> Proceed To Buy</span></a></button>
+                   
+                         @endif --}}
+
+                         @if(!Cart::content()->count() > 0)
+                       
+                        @else
+                        <button wire:click.prevent="checkout" class=" btn-checkout"><span class=" btn-checkout-text"> Proceed To Buy</span></button>
+                        @endif
+
                     </div>
 
                     <div class="flex-checkout small_text">

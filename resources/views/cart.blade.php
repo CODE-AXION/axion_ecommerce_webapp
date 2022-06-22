@@ -174,7 +174,7 @@
        
         @else
         <div class="login_btn">
-            <a class="cta" href="{{route('login')}}"><button class="btn_sign btn_2">Login</button></a>
+            <a class="cta" href="{{route('login', ['register' => 'no_checkout'])}}"><button class="btn_sign btn_2">Login</button></a>
         </div>
         <div class="login_btn" >
             <a class="cta" href="{{route('register')}}"><button class="btn_sign">Join</button></a>

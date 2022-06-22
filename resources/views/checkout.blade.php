@@ -303,197 +303,129 @@
 
 
 
-<div class="shop_container">
+<div class="product_details_body">
 
+    <div class="products_details_container">
 
+   
+    <h2 class="payment__header">Secure Checkout-Order Form</h2>
 
-    <div class="categories_section">
+        <div class="checkout__detail_form_container">
 
-        <span class="breadcrumbs_1" >Home / Categories / Electronics</span>
-
-        <div class="all_categories">
-
-
-            <h3>Categories</h3>
-            @foreach ($categories as $category)
+            <div class="first--half_container half--container">
                 
+                <div class="firstname form--input_wrapper">
+                    <label for="firstname" class="label--form"> First Name: </label>
+                    <input id="firstname" class="form--input" type="text" value="">
+                </div>
+            
+                
+                <div class="firstname form--input_wrapper">
+                    <label for="firstname" class="label--form"> Email Address: </label>
+                    <input id="firstname" class="form--input" type="text" value="">
+                </div>
 
-            <a href="{{route('shop.name',['category_slug'=>$category->slug,'category_id'=>$category->id ] )}}"> <h2 class="category_sort_1">{{$category->name}}</h2></a>
-            @endforeach
+               
+
+                <div class="firstname form--input_wrapper">
+                    <label for="firstname" class="label--form"> Country: </label>
+                    <input id="firstname" class="form--input" type="text" value="">
+                </div>
+
+
+                <div class="firstname form--input_wrapper">
+                    <label for="firstname" class="label--form"> City: </label>
+                    <input id="firstname" class="form--input" type="text" value="">
+                </div>
+
+
+            </div>
+
+            <div class="last--half_container half--container">
+
+                <div class="firstname form--input_wrapper">
+                    <label for="firstname" class="label--form"> Last Name: </label>
+                    <input id="firstname" class="form--input"  type="text" value="">
+                </div>
+
+                <div class="firstname form--input_wrapper">
+                    <label for="firstname" class="label--form"> Address: </label>
+                    <input id="firstname" class="form--input" type="text" value="">
+                </div>
+
+                <div class="firstname form--input_wrapper">
+                    <label for="firstname" class="label--form"> Phone Number: </label>
+                    <input id="firstname" class="form--input" type="text" value="">
+                </div>
+
+                
+                <div class="firstname form--input_wrapper">
+                    <label for="firstname" class="label--form"> Pin-Code/ZIP: </label>
+                    <input id="firstname" class="form--input" type="text" value="">
+                </div>
+
+            </div>
+            
+            <div class="checkout__payment__wrapper">
+
+                <h2 class="payment__information">Payment Information</h2>
+
+                <p class="payment--text_1">Choose a way to pay for your order you little shit ! you thought it was free ? </p>
+
+                <div class="payment_options_wrapper">
+
+                    <div class="payment_option--item">
+                   
+                        <div class="payment_option_text">
+                            <input type="checkbox" name="" id="">
+                            <span>Cash On Delivery</span>
+                        </div>
+                        <!-- <div class="payment_option_logos">
+                            
+                        </div> -->
+                    </div>
+
+                    <div class="payment_option--item">
+                   
+                        <div class="payment_option_text">
+                            <input type="checkbox" name="" id="">
+                            <span>PayPal</span>
+                        </div>
+                        <div class="payment_option_logos payment_images_wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTncMYPkIdZRra5Z4_f3_Rd4ZKeFDQTBAf08chrNXNdXAAluvmXJrr1Z-dwRT_lKyi56w&usqp=CAU" alt="" class="payment_images">
+                        </div>
+                    </div>
+
+                    <div class="payment_option--item">
+                   
+                        <div class="payment_option_text">
+                            <input type="checkbox" name="" id="">
+                            <span>Credit Or Debit Card </span>
+                        </div>
+                        <div class="payment_option_logos payment_images_wrapper">
+                            <img src="cards.png" class="payment_images" alt="">
+                        </div>
+                    </div>
+
+              
+                    <h3 class="payment__instruction">Payment Instruction</h3>
+                    <p>We will contact you at the phone number that you have provided us with above to arrange payments</p>
+
+                    <button class="btn--place_order"><span class="-sui place_order ">Place Order</span></button>
+                </div>
+
+
+
+            </div>
+
         </div>
-
-
-        <div class="brand">
-
-            <h3>Sub Categories</h3>
-
-            <hr class="hr_category">
-
-            <a href="" class="category_sort_wrapper">
-            <input type="checkbox"> <h6 class="category_sort">Fasion clothings</h6>
-            </a>
-
-            <a href="" class="category_sort_wrapper">
-                <input type="checkbox"> <h6 class="category_sort">Laptops</h6>
-            </a>
-
-            <a href="" class="category_sort_wrapper">
-                <input type="checkbox"> <h6 class="category_sort">Powerbanks & Chargers</h6>
-                </a>
-    
-            <a href="" class="category_sort_wrapper">
-                <input type="checkbox"> <h6 class="category_sort">CPUS</h6>
-            </a>
-
-
-            <a href="" class="category_sort_wrapper">
-                <input type="checkbox"> <h6 class="category_sort">GPUS</h6>
-                </a>
-    
-            <a href="" class="category_sort_wrapper">
-                <input type="checkbox"> <h6 class="category_sort">Fasion clothings</h6>
-            </a>
-
-
-        </div>
-
-        
-        <div class="brand">
-
-            <h3>Color</h3>
-
-            <hr class="hr_category">
-
-            <a href="" class="category_sort_wrapper">
-            <input type="checkbox"> <h6 class="category_sort">Red (271)</h6>
-            </a>
-
-            <a href="" class="category_sort_wrapper">
-                <input type="checkbox"> <h6 class="category_sort">Blue (331)</h6>
-            </a>
-
-            <a href="" class="category_sort_wrapper">
-                <input type="checkbox"> <h6 class="category_sort">Yellow (54)</h6>
-                </a>
-    
-            <a href="" class="category_sort_wrapper">
-                <input type="checkbox"> <h6 class="category_sort">Cyan (32)</h6>
-            </a>
-
-
-            <a href="" class="category_sort_wrapper">
-                <input type="checkbox"> <h6 class="category_sort">Ocean Blue (44)</h6>
-                </a>
-    
-            <a href="" class="category_sort_wrapper">
-                <input type="checkbox"> <h6 class="category_sort">white (46)</h6>
-            </a>
-
-
-        </div>
-
-
 
 
     </div>
 
-    <!-- ----------------------------- D I V I S I O N ------------------------------------- -->
-
-    <div class="shop_products_section">
-
-
-
-           
-        <div class="products_container_wrapper">
-
-            
-
-            @if(Session::has('message'))
-            <p style="background-color:#9e9eff;font-size:1.3rem; padding:10px;border-radius:10px;" >{{ Session::get('message') }}</p>
-            @endif
-            <div class="card_container products_swiper swiper" >
-
-                <div class="sort_by_wrapper">
-
-                 @if(Route::is('shop.index'))
-                    <h2>shop</h2>
-                @elseif(Route::is('shop.name'))
-               
-                    <h2>{{$categoryName}}</h2>
-                @endif
-                
-                
-
-                    <form action="">
-                        <select wire:model="sortBy" class="sorting_sys" name="" id="">
-                            <option value="">Default Sorting</option>
-                            <option value="low">Price By low to heigh</option>
-                            <option value="heigh">Price By heigh to low</option>
-                            <option value="featured">sory by popularity</option>
-                        
-                        </select>
-
-                        <select wire:model="perPage" class="sorting_sys" name="" id="">
-                            <option value="0">SORT BY page</option>
-                            <option value="3">3</option>
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                        </select>
-                    </form>
-                    
-                </div>
-
-            
-                    <div class="card_section_1 " >
-
-
-                @foreach ($products as $product)
-                    
-                
-
-                        <div class="card_1 swiper-slide ">
-                            <a href="{{route('product.show',['id'=> $product->id,'slug'=>$product->slug])}}">
-                                <div class="card_image_1"><img src="images/lenevo_laptop_1.webp" alt=""></div>
-                                <div class="card_panel">
-                                    <div class="card_main_title_1"><h2>{{Str::limit($product->name,40)}}</h2></div>
-                
-                                    
-                                    
-                                    <div class="card_readmore"><span>{{$product->sale_price}}</span></div>
-                                    <button class="btn-buy_now"><a href="#" wire:click.prevent="store({{ $product->id }}, '{{ $product->name }}','{{ $product->sale_price }}')" >Add To Cart</a></button>
-                                </div>
-                            </a>
-                        </div>
-
-                    @endforeach
-
-
-                    
-                        
-
-                    </div>
-
-                
-
-                </div>
-        </div>
-            
-
-
-        </div>
-
-    </div> 
-
-
-
-
-
-
-
-
-
 </div>
+
+
 
 
 

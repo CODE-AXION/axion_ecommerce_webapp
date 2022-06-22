@@ -2675,3 +2675,157 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 5px;
   width: fit-content;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form--input_wrapper{
+
+  margin-block: 20px;
+}
+
+.form--input{
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0,0.3);
+  width: 90%;
+}
+
+.checkout__detail_form_container{
+  display: grid;
+  grid-template-areas: 'form_1 form_2 '
+                        'checkout_template checkout_template';
+                        grid-gap: 10px;
+
+  margin-bottom:20px ;
+
+                        
+}
+
+.checkout__payment__wrapper{
+
+  grid-area: checkout_template;
+  border-radius: 5px;
+  /* border: 1px solid rgba(0, 0, 0, 0.3); */
+
+}
+
+.first--half_container{
+  grid-area: form_1;
+  border-radius: 5px;
+  /* border: 1px solid rgba(0, 0, 0, 0.3); */
+  
+}
+
+.payment_option--item{
+  border-radius: 5px;
+  border: 2px solid #64a1cf;
+  background-color: #eef6fc;
+  margin-block: 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  
+}
+
+.last--half_container{
+  grid-area: form_2;
+  border-radius: 5px;
+  /* border: 1px solid rgba(0, 0, 0, 0.3); */
+}
+
+.half--container{
+  width: 100%;
+}
+
+.label--form{
+  display: block;
+  font-family: system-ui;
+  font-size: 1.3rem;
+}
+
+.payment_option_text{
+  margin-left: 20px;
+}
+
+.payment_option_logos{
+  margin-right: 20px;
+  margin-block: auto;
+ 
+}
+
+
+
+.payment_images{
+ 
+  /* border: 1px solid black; */
+  height: 40px;
+  display: block;
+}
+
+.btn--place_order{
+  padding-inline:40px;
+  padding-block: 10px;
+  width: 30%;
+  background-color: #1b6eff;
+  margin-block: 10px;
+  
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  
+}
+
+.place_order{
+  font-size: 1.1rem;
+  color: white;
+
+  
+}
+
+.payment__information{
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: system-ui;
+
+}
+
+.payment__header{
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: system-ui;
+
+}
+
+.payment__instruction{
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: system-ui;
+
+}
+
+.payment--text_1{
+  font-family: system-ui;
+  font-size: 1.1rem;
+}
